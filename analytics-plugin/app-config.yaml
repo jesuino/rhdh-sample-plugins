@@ -1,0 +1,6 @@
+app:
+  baseUrl: http://localhost:3000
+  testAnalytics:
+    showEvent: true
+backend:
+  baseUrl: http://localhost:7007
