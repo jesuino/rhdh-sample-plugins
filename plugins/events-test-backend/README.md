@@ -6,9 +6,13 @@ _This plugin was created through the Backstage CLI_
 
 ## Getting started
 
-Your plugin has been added to the example app in this repository, meaning you'll be able to access it by running `yarn
-start` in the root directory, and then navigating to [/events-test/health](http://localhost:7007/api/events-test/health).
+Run:
+```
+yarn start
+```
 
-You can also serve the plugin in isolation by running `yarn start` in the plugin directory.
-This method of serving the plugin provides quicker iteration speed and a faster startup and hot reloads.
-It is only meant for local development, and the setup for it can be found inside the [/dev](/dev) directory.
+Try the endpoint `http://localhost:7007/api/events-test/send_message?message=Hello%20World` and you should see the event sent by the events service being consumed by your subscriber:
+
+```
+2024-07-17T15:48:23.475Z events-test info Received event: Hello World
+```
