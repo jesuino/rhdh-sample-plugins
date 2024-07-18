@@ -9,7 +9,7 @@ import { createRouter } from './service/router';
  *
  * @public
  */
-export const replacemePlugin = createBackendPlugin({
+export const plugin = createBackendPlugin({
   pluginId: 'replaceme',
   register(env) {
     env.registerInit({
