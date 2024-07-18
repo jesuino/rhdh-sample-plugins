@@ -11,6 +11,8 @@ describe('createRouter', () => {
     const router = await createRouter({
       logger: mockServices.logger.mock(),
       config: mockServices.rootConfig(),
+      discovery: mockServices.discovery(),
+      httpAuth: mockServices.httpAuth(),
     });
     app = express().use(router);
   });
@@ -25,6 +27,15 @@ describe('createRouter', () => {
 
       expect(response.status).toEqual(200);
       expect(response.body).toEqual({ status: 'ok' });
+    });
+  });
+
+  describe('GET /hello', () => {
+    it('returns 200', async () => {
+      const response = await request(app).get('/hello');
+
+      expect(response.status).toEqual(200);
+      expect(response.body).toEqual({ message: 'Hello user:default/mock' });
     });
   });
 });

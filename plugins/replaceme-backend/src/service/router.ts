@@ -25,10 +25,9 @@ export async function createRouter(
 
   const router = Router();
   router.use(express.json());
-
   router.get('/health', async (_, res) => res.json({ status: 'ok' }));
 
-  router.get('/auth', async (req, res) => {
+  router.get('/hello', async (req, res) => {
     const caller = await httpAuth.credentials(req, { allow: ['user'] });
     res.json({ message: `Hello ${caller.principal.userEntityRef}` });
   });
