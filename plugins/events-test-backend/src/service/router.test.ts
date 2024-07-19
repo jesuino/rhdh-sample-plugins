@@ -11,6 +11,7 @@ describe('createRouter', () => {
     const router = await createRouter({
       logger: mockServices.logger.mock(),
       config: mockServices.rootConfig(),
+      events: mockServices.events.mock()
     });
     app = express().use(router);
   });
