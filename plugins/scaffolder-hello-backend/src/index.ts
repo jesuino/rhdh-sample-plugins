@@ -1,0 +1,1 @@
+export { scaffolderHelloPlugin as default } from './module';
