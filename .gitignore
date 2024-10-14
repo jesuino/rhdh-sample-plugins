@@ -58,3 +58,5 @@ e2e-test-report/
 # Dynamic Plugins
 dist-dynamic/
 dynamic-plugins-root/*
+
+app-config.local.yaml
